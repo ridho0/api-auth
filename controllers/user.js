@@ -2,7 +2,7 @@ const db = require('../models')
 const methods = {}
 const passwordHash = require('password-hash')
 const jwt = require('jsonwebtoken')
-
+const jwtHelpers = require('../helpers/jwt')
 
 methods.signup = function(req, res, next) {
   let pass = passwordHash.generate(req.body.password)
